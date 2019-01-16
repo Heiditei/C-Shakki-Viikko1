@@ -8,7 +8,18 @@ public:
 	Station();
 	Piece* board[8][8];
 
-	Piece* wk;
+	Piece* wK;
+	Piece* wQ;
+	Piece* wT;
+	Piece* wB;
+	Piece* wKn;
+	Piece* wP;
+	Piece* bK;
+	Piece* bQ;
+	Piece* bT;
+	Piece* bB;
+	Piece* bKn;
+	Piece* bP;
 
 }
 

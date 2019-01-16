@@ -5,8 +5,8 @@
 // Vakioarvot nappulatyypeille.
 enum
 {
-	WK, WQ, WT,WB, WKn, WP,
-	BK, BQ, BT, BB, BKn, BP,
+	wK, wQ, wT, wB, wKn, wP,
+	bK, bQ, bT, bB, bKn, bP,
 };
 
 class Piece {
