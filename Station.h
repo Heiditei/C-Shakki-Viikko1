@@ -1,5 +1,7 @@
 #pragma once
-#include <Piece.h>
+#include <iostream>
+#include "Piece.h"
+
 
 class Station
 {
@@ -14,6 +16,7 @@ public:
 	Piece* wB;
 	Piece* wKn;
 	Piece* wP;
+
 	Piece* bK;
 	Piece* bQ;
 	Piece* bT;
