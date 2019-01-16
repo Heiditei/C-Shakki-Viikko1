@@ -5,11 +5,11 @@
 // Vakioarvot nappulatyypeille.
 enum
 {
-	VT, VR, VL, VD, VK, VS,
-	MT, MR, ML, MD, MK, MS
+	WK, WQ, WT,WB, WKn, WP,
+	BK, BQ, BT, BB, BKn, BP,
 };
 
-class Pawn {
+class Piece {
 
 private:
 	std::wstring unicode;
@@ -17,8 +17,8 @@ private:
 	int _code; // VT, VR, MT tms.
 
 public:
-	Pawn(std::wstring, int, int);
-	Pawn() {};
+	Piece(std::wstring, int, int);
+	Piece() {};
 	void setCode(int);
 	int getCode();
 	void setUnicode(std::wstring);
