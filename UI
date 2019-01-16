@@ -1,0 +1,10 @@
+#pragma once
+class UI
+{
+public:
+		UI(Station* station);
+		Station* station;
+		void drawBoard();
+};
+
+};
