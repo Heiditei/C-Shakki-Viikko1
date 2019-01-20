@@ -2,9 +2,7 @@
 #include "Piece.h"
 
 class Piece {
-	Piece()
-	{
-	}
+
 	enum
 	{
 		wK, wQ, wT, wB, wKn, wP,
@@ -15,40 +13,42 @@ private:
 	int color;				// white = 0, black = 1
 	int _code;				// wK, bQ etc
 
-
-	Piece(wstring, int, int)
+	
+	Piece(wstring uni, int col, int code)
 	{
-
+		unicode = uni;
+		color = col;
+		_code = code;
 	}
 
-	void setCode(int)
+	void setCode(int code)
 	{
-
+		_code = code;
 	}
 
 	int getCode()
 	{
-
+		return _code;
 	}
 
-	void setUnicode(wstring)
+	void setUnicode(wstring uni)
 	{
-
+		unicode = uni;
 	}
 
 	wstring getUnicode()
 	{
-
+		return unicode;
 	}
 
-	void setColor(int)
+	void setColor(int col)
 	{
-
+		color = col;
 	}
 
 	int getColor()
 	{
-
+		return color;
 	}
 
 

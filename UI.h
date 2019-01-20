@@ -1,5 +1,9 @@
+#ifndef UI
+#define UI
 #pragma once
+#include "pch.h"
 #include "Station.h"
+#include "Piece.h"
 
 class UI
 {
@@ -10,3 +14,4 @@ public:
 };
 
 };
+#endif

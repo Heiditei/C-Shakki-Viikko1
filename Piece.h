@@ -1,4 +1,7 @@
+#ifndef PIECE
+#define PIECE
 #pragma once
+#include "pch.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -27,3 +30,4 @@ public:
 	void setColor(int);
 	int getColor();
 };
+#endif

@@ -1,4 +1,7 @@
+#ifndef STATION
+#define STATION
 #pragma once
+#include "pch.h"
 #include <iostream>
 #include "Piece.h"
 
@@ -28,3 +31,4 @@ public:
 
 
 };
+#endif

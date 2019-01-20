@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "UI.h"
 #include "Station.h"
+#include "Piece.h"
 
 class UI{
 
@@ -10,8 +11,6 @@ class UI{
 	{
 
 	}
-
-
 
 	void drawBoard() 
 	{
