@@ -1,45 +1,58 @@
-#define WHITE_SQUARE 0xDB
-#define BLACK_SQUARE 0xFF
-
 #include "pch.h"
 #include "UI.h"
+#include <iostream>
+#include <string>
+#include <io.h>
+#include <fcntl.h>
 #include "Station.h"
 #include "Piece.h"
+#include <Windows.h>
 
 
-class UI{
+/*
+	BlackFore = 0,
+	GrayFore = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,
+	WhiteFore = FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,
 
-	Station* station;
+	BlackBack = 0,
+	GrayBack = BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE,
+	WhiteBack = BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE,
+*/
+using namespace std;
 
-	UI(Station* station)
-	{
+UI::UI(Station* stion)
+{
+	station = stion;
+	//haistakaavittu.kokosakki.suorita();
+}
 
-	}
-
-	void drawBoard()
-	{
-		for (int i=0; i < 8; i++) {
-			if (iLine % 2 == 0)
-			{				
-				// Line starting with WHITE
-				printLine(iLine, WHITE_SQUARE, BLACK_SQUARE, game);
+void UI::drawBoard()
+{
+	const HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY);
+	cout << " A  B  C  D  E  F  G  H  " << endl;
+	for (int i = 0; i < 8; i++) {
+		SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY);
+		cout << i + 1;
+		for (int j = 0; j < 8; j++)
+		{
+			if ((i + j) % 2 == 0) {
+				//White Background
+				SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
+				cout << "   ";
 			}
-
-			else
+			else if ((i + j) % 2 != 0)
 			{
-				// Line starting with BLACK
-				printLine(iLine, BLACK_SQUARE, WHITE_SQUARE);
+				//Gray Background
+				SetConsoleTextAttribute(handle, BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
+				cout << "   ";
+			}
+			else {
+				cout << "pim";
 			}
 		}
-		/*SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY | BACKGROUND_RED |
-			BACKGROUND_GREEN | BACKGROUND_BLUE);
-
-		_setmode(_fileno(stdout), _O_U16TEXT);*/
+		cout << endl;
 	}
-	
-	~UI()
-	{
 
-	}
-};
+}
 

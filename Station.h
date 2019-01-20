@@ -11,7 +11,6 @@ class Station
 public:
 	//Konstruktori luo alkuaseman laudalle
 	Station();
-	Piece* board[8][8];
 
 	Piece* wK;
 	Piece* wQ;
@@ -27,8 +26,6 @@ public:
 	Piece* bKn;
 	Piece* bP;
 
-}
-
-
+	Piece* board[8][8];
 };
 #endif

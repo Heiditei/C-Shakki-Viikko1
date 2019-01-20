@@ -7,11 +7,13 @@
 using namespace std;
 
 // Standard values for pieces
-enum
+
+enum class piece
 {
 	wK, wQ, wR, wB, wKn, wP,
-	bK, bQ, bR, bB, bKn, bP,
+	bK, bQ, bR, bB, bKn, bP
 };
+
 
 class Piece {
 
