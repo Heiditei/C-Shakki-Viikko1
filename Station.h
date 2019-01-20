@@ -15,14 +15,14 @@ public:
 
 	Piece* wK;
 	Piece* wQ;
-	Piece* wT;
+	Piece* wR;
 	Piece* wB;
 	Piece* wKn;
 	Piece* wP;
 
 	Piece* bK;
 	Piece* bQ;
-	Piece* bT;
+	Piece* bR;
 	Piece* bB;
 	Piece* bKn;
 	Piece* bP;

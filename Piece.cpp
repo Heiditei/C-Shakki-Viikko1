@@ -5,8 +5,8 @@ class Piece {
 
 	enum
 	{
-		wK, wQ, wT, wB, wKn, wP,
-		bK, bQ, bT, bB, bKn, bP,
+		wK, wQ, wR, wB, wKn, wP,
+		bK, bQ, bR, bB, bKn, bP,
 	};
 private:
 	wstring unicode;		//  L"u1234" etc

@@ -9,8 +9,8 @@ using namespace std;
 // Standard values for pieces
 enum
 {
-	wK, wQ, wT, wB, wKn, wP,
-	bK, bQ, bT, bB, bKn, bP,
+	wK, wQ, wR, wB, wKn, wP,
+	bK, bQ, bR, bB, bKn, bP,
 };
 
 class Piece {
