@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
 #include <iostream>
+using namespace std;
 
-// Vakioarvot nappulatyypeille.
+// Standard values for pieces
 enum
 {
 	wK, wQ, wT, wB, wKn, wP,
@@ -12,17 +13,17 @@ enum
 class Piece {
 
 private:
-	std::wstring unicode;
-	int color; // white = 0, black = 1
-	int _code; // VT, VR, MT tms.
+	wstring unicode;		//  L"u1234" etc
+	int color;				// white = 0, black = 1
+	int _code;				// wK, bQ etc
 
 public:
-	Piece(std::wstring, int, int);
+	Piece(wstring, int, int);
 	Piece() {};
 	void setCode(int);
 	int getCode();
-	void setUnicode(std::wstring);
-	std::wstring getUnicode();
+	void setUnicode(wstring);
+	wstring getUnicode();
 	void setColor(int);
 	int getColor();
 };
