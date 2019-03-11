@@ -1,5 +1,3 @@
-#ifndef STATION
-#define STATION
 #pragma once
 #include "pch.h"
 #include <iostream>
@@ -28,4 +26,3 @@ public:
 
 	Piece* board[8][8];
 };
-#endif

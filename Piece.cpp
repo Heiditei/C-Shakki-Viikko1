@@ -9,13 +9,13 @@ using namespace std;
 //	wstring unicode;		//  L"u1234" etc
 //	int color;				// white = 0, black = 1
 //	int _code;				// wK, bQ etc
-	
-Piece::Piece (wstring uni, int col, int code)
+
+Piece::Piece(wstring uni, int col, int code)
 {
 	unicode = uni;
 	color = col;
 	_code = code;
-	wcout << getUnicode();
+	
 }
 
 void Piece::setCode(int code)
@@ -45,5 +45,5 @@ void Piece::setColor(int col)
 
 int Piece::getColor()
 {
-	return color;	
+	return color;
 }

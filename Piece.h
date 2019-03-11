@@ -1,5 +1,3 @@
-#ifndef PIECE
-#define PIECE
 #pragma once
 #include "pch.h"
 #include <string>
@@ -32,4 +30,3 @@ public:
 	void setColor(int);
 	int getColor();
 };
-#endif

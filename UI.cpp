@@ -13,7 +13,6 @@
 	BlackFore = 0,
 	GrayFore = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,
 	WhiteFore = FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,
-
 	BlackBack = 0,
 	GrayBack = BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE,
 	WhiteBack = BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE,
@@ -29,30 +28,72 @@ UI::UI(Station* stion)
 void UI::drawBoard()
 {
 	const HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY);
-	cout << " A  B  C  D  E  F  G  H  " << endl;
 	for (int i = 0; i < 8; i++) {
-		SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY);
-		cout << i + 1;
-		for (int j = 0; j < 8; j++)
+		int row = i+1;
+
+		SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN);
+		wcout << row;
+		if (i % 2 == 0)
 		{
-			if ((i + j) % 2 == 0) {
-				//White Background
-				SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
-				cout << "   ";
-			}
-			else if ((i + j) % 2 != 0)
+			for (int j = 0; j < 8; j++)
 			{
-				//Gray Background
-				SetConsoleTextAttribute(handle, BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
-				cout << "   ";
-			}
-			else {
-				cout << "pim";
+				if (j % 2 == 0)
+				{
+					SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
+					wcout << " ";
+				}
+				else
+				{
+					SetConsoleTextAttribute(handle, BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
+					wcout << " ";
+				}
+
+				if (station->board[i][j] == nullptr)
+				{
+					wcout << L"  ";
+				}
+
+				else
+				{
+					wcout << station->board[i][j]->getUnicode() << L" ";
+				}
 			}
 		}
-		cout << endl;
+		else
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (j % 2 == 0)
+				{
+					SetConsoleTextAttribute(handle, BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
+					wcout << " ";
+				}
+				else
+				{
+					SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
+					wcout << " ";
+				}
+				if (station->board[i][j] == nullptr)
+				{
+					wcout << L"  ";
+				}
+
+				else
+				{
+					wcout << station->board[i][j]->getUnicode() << L" ";
+				}
+			}
+		}
+		wcout << endl;
 	}
 
+	SetConsoleTextAttribute(handle, BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN);
+	wcout << "  a  b  c  d  e  f  g  h " << endl << endl << endl;
 }
 
+Move UI::giveOpponentsMove()
+{
+
+
+
+}
