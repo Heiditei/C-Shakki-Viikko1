@@ -13,10 +13,10 @@ public:
 	Square getEndSquare();
 	bool isShortCastle();
 	bool isLongCastle();
-
+	Piece* whichRaised = 0;
 
 private:
-	int whichRaised = 0;
+	
 	Square startSquare;
 	Square endSquare;
 	bool shortCastle;

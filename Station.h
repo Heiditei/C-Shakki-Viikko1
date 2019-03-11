@@ -2,6 +2,7 @@
 #include "pch.h"
 #include <iostream>
 #include "Piece.h"
+#include "Move.h"
 
 
 class Station
@@ -25,4 +26,25 @@ public:
 	Piece* bP;
 
 	Piece* board[8][8];
+
+	void updateStation(Move*);
+	int getTurn();
+	void setTurn(int);
+	bool getIsWhiteKingMoved();
+	bool getIsBlackKingMoved();
+	bool getIsWhiteRightRookMoved();
+	bool getIsWhiteLeftRookMoved();
+	bool getIsBlackRightRookMoved();
+	bool getIsBlackLeftRookMoved();
+
+
+private:
+
+	int turn;
+	bool IsWhiteKingMoved;
+	bool IsBlackKingMoved;
+	bool IsWhiteRightRookMoved;
+	bool IsWhiteLeftRookMoved;
+	bool IsBlackRightRookMoved;
+	bool IsBlackLeftRookMoved;
 };

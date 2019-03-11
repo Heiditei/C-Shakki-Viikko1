@@ -8,8 +8,8 @@ using namespace std;
 
 enum class piece
 {
-	wK, wQ, wR, wB, wKn, wP,
-	bK, bQ, bR, bB, bKn, bP
+	wK, wQ, wR, wB, wN, wP,
+	bK, bQ, bR, bB, bN, bP
 };
 
 
@@ -18,7 +18,7 @@ class Piece {
 private:
 	wstring unicode;		//  L"u1234" etc
 	int color;				// white = 0, black = 1
-	int code;				// wK, bQ etc
+	int _code;				// wK, bQ etc
 
 public:
 	Piece(wstring, int, int);
