@@ -22,7 +22,7 @@ Station::Station()
 	Piece* bR = new Piece(L"\u265C", 1, 8);			//Black Rook
 	Piece* bB = new Piece(L"\u265D", 1, 9);			//Black Bishop
 	Piece* bKn = new Piece(L"\u265E", 1, 10);		//Black Knight
-	Piece* bP = new Piece(L"\u265F", 1, 11);	//Black Pawn
+	Piece* bP = new Piece(L"\u265F", 1, 11);		//Black Pawn
 
 	for (size_t i = 0; i < 8; i++)
 	{
@@ -51,6 +51,15 @@ Station::Station()
 	board[1][6] = wP;
 	board[1][7] = wP;
 
+	board[6][0] = bP;
+	board[6][1] = bP;
+	board[6][2] = bP;
+	board[6][3] = bP;
+	board[6][4] = bP;
+	board[6][5] = bP;
+	board[6][6] = bP;
+	board[6][7] = bP;
+
 	board[7][0] = bR;
 	board[7][1] = bKn;
 	board[7][2] = bB;
@@ -60,13 +69,5 @@ Station::Station()
 	board[7][6] = bKn;
 	board[7][7] = bR;
 
-	board[6][0] = bP;
-	board[6][1] = bP;
-	board[6][2] = bP;
-	board[6][3] = bP;
-	board[6][4] = bP;
-	board[6][5] = bP;
-	board[6][6] = bP;
-	board[6][7] = bP;
 }
 
