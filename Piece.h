@@ -18,7 +18,7 @@ class Piece {
 private:
 	wstring unicode;		//  L"u1234" etc
 	int color;				// white = 0, black = 1
-	int _code;				// wK, bQ etc
+	int code;				// wK, bQ etc
 
 public:
 	Piece(wstring, int, int);

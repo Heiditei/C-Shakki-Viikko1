@@ -10,22 +10,22 @@ using namespace std;
 //	int color;				// white = 0, black = 1
 //	int _code;				// wK, bQ etc
 
-Piece::Piece(wstring uni, int col, int code)
+Piece::Piece(wstring uni, int col, int cd)
 {
 	unicode = uni;
 	color = col;
-	_code = code;
+	code = cd;
 	
 }
 
-void Piece::setCode(int code)
+void Piece::setCode(int cd)
 {
-	_code = code;
+	code = cd;
 }
 
 int Piece::getCode()
 {
-	return _code;
+	return code;
 }
 
 void Piece::setUnicode(wstring uni)
